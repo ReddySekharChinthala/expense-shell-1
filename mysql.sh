@@ -2,6 +2,8 @@
 
 source ./common.sh
 
+check_root
+
 echo "please enter the password:"
 read -s mysql_root_password
 
