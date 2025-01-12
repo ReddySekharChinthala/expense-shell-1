@@ -25,7 +25,7 @@ mysql -h db.rsdevops78s.online -uroot -pExpenseApp@1 -e 'SHOW DATABASES;' &>>$LO
 if [ $? -ne 0 ]
 then 
     mysql_secure_installation --set-root-pass ${mysql_root_password} &>>$LOGFILE
-    VALIDATE $? "MySQL_Root_Password_SetUP"
+    VALIDATE $? "MyyySQL_Root_Password_SetUP"
 else
     echo -e "mysql root setup password is alread set..$G SKIPPING $N" 
 fi
