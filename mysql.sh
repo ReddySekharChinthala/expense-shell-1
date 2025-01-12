@@ -13,7 +13,7 @@ systemctl enable mysqld &>>$LOGFILE
 
 systemctl start mysqld &>>$LOGFILE
 
-mysql -h db.rsdevops78s.online -uroot -pExpenseApp@1 -e 'SHOW DATABASES;' &>>$LOGFILE
+mysql -h db.rsdevops78s.online -uroot -p${mysql_root_password} -e 'SHOW DATABASES;' &>>$LOGFILE
 if [ $? -ne 0 ]
 then 
     mysql_secure_installation --set-root-pass ${mysql_root_password} &>>$LOGFILE
